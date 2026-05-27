@@ -174,16 +174,6 @@ const amigurumis = [
     },
 
     {
-        img: "/crochet/tortuga-llavero.jpg",
-        titulo: "Tortuga Llavero",
-        tamaño: "10 cm",
-        tiempo: "1 día",
-        dificultad: "★★☆☆☆",
-        materiales: "Hilo algodón",
-        descripcion: "Una pequeña tortuguita adorable diseñada para acompañarte todos los días con mucha ternura."
-    },
-
-    {
         img: "/crochet/unicornio.jpg",
         titulo: "Unicornio",
         tamaño: "28 cm",
@@ -264,6 +254,8 @@ export const Crochet = () => {
                             ? 0
                             : actual+1 )} > <ChevronRight className="w-6 h-6 text-pink-500 translate-x-1.5" />
                             </button>
+
+                            
                             
 
                         
@@ -313,8 +305,8 @@ export const Crochet = () => {
                         <div className="flex flex-col">
 
                             {/* titulo */}
-                            <div className="bg-red-500">
-                                titulo
+                            <div className="flex py-5  justify-center bg-red-500 text-5xl text-[var(--header-text-color)]">
+                                <p>{amigurumis[actual].titulo} ♡</p>
                             </div>
 
                             {/* grid */}
@@ -322,6 +314,7 @@ export const Crochet = () => {
 
                                 {/* labels */}
                                 <div className="flex flex-col">
+                                    <p>Colores</p>
                                     <p>tamaño</p>
                                     <p>tiempo</p>
                                     <p>dificultad</p>
@@ -329,7 +322,12 @@ export const Crochet = () => {
                                 </div>
 
                                 {/* valores */}
-                                <div className="flex flex-col">
+                                <div className="flex flex-col ">
+                                    <div className="flex flex-row gap-6">
+                                        <div className="w-4 h-4 bg-pink-500"/>
+                                        <div className="w-4 h-4 bg-pink-500"/>
+                                        <div className="w-4 h-4 bg-pink-500"/>
+                                    </div>
                                     <p>{amigurumis[actual].tamaño}</p>
                                     <p>{amigurumis[actual].tiempo}</p>
                                     <p>{amigurumis[actual].dificultad}</p>
