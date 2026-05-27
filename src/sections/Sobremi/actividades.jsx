@@ -1,0 +1,96 @@
+import { Carrusel } from "./carrusel";
+import { DecoracionI } from "./decoracionI";
+import { DecoracionD } from "./decoracionD";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+
+export const Actividades = () => {
+    const [emblaRef, emblaApi] = useEmblaCarousel();
+    
+    return (
+        
+
+        <section className="min-h-screen container mx-auto relative overflow-hidden px-4 md:px-12 "> 
+        
+        <div className="relative flex flex-col px-10 pt-15  border-2 border-[var(--header-text-color)] rounded-[25px]">
+
+        {/* <img className="absolute inset-0 rounded-[25px] object-cover w-full h-full overflow opacity-40 "src="./Fondos/fondo-todo.png" alt="" />*/}
+
+            <div className="flex flex-row gap-16 px-6 "> 
+
+            <div className="w-[42%] flex justify-end items-center relative  pt-5"> 
+
+                <DecoracionI />
+
+                <div className=" gradiente-borde px-6 pt-4 pb-2 -rotate-8 rounded-2xl shadow-[15px_15px_60px_#544444]">
+
+                <img
+                    className="w-100"
+                    src="/Actividades/carrusel/foto-principal.png"
+                    alt=""
+                />
+
+                <p className="text-center pt-2 "> 
+                    ¡Esta soy yo!
+                </p>
+
+                </div>
+
+            </div>
+
+            <div className="relative w-[58%] flex items-center justify-center px-10"> 
+
+                <DecoracionD />
+
+                <div className=" p-8 rounded-[2rem] shadow-[0_0px_10px_#ffffff]"> {/* bg-[#F6D6DC] shadow-[0_10px_20px_#826876]*/}
+                <h2 className="text-4xl mb-6 text-center "> 
+                    ¡Mis intereses!
+                    </h2>
+                <div className="border-3  border-dashed  rounded-[2rem] px-3 py-4">  
+
+                    
+
+                    <p className=" leading-snug whitespace-pre-line w-full "> 
+                    {`El crochet es una de mis formas favoritas de expresar creatividad. Me encanta crear amigurumis y piezas hechas a mano llenas de color, ternura y personalidad.
+
+                    También disfruto pintar, dibujar y convertir ideas en pequeños proyectos creativos que transmitan alegría y calidez.
+
+                    Fuera del mundo handmade, me gusta practicar karate, viajar, aprender cosas nuevas y pasar tiempo con las personas que quiero.
+
+                    Actualmente continúo desarrollando mis proyectos creativos mientras sigo aprendiendo y creciendo cada día.`}
+                    </p>
+
+                </div>
+
+                
+                </div>
+
+            
+            </div>
+
+            </div>
+
+            
+            <div className="flex py-6 px-30"> 
+
+            <button onClick={() => emblaApi?.scrollPrev()}>
+                <ChevronLeft />
+            </button>
+
+            <Carrusel emblaRef={emblaRef} />
+
+            <button onClick={() => emblaApi?.scrollNext()}>
+                <ChevronRight />
+            </button>
+
+            
+            </div>
+
+        
+        </div>
+
+        
+        </section>
+
+    );
+};

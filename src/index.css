@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+@import "tailwindcss";
+
+:root {
+    /*--font-primary:"Fuzzy Bubbles", cursive;*/
+    /*--font-primary:"Indie Flower", cursive;*/
+    /*--font-primary:"Mali", cursive;*/
+    --font-primary: "Playpen Sans", cursive;
+    --font-primary-color: #775757;
+
+    --header-text-color: #ffffff;
+    /**/
+    --header-shadow-up-color: #ffffff;
+    --header-shadow-color: #F069CB;
+
+    --background: #FF87D0;
+    /*También es el color de contactame, y el las letras del hover el header*/
+    --title-type: "DynaPuff", cursive;
+
+
+
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--font-primary-color);
+    font-weight: 500;
+}
+
+.titulo-puntadas {
+
+
+
+    color: #FFB8E2;
+
+    -webkit-text-stroke: 1px rgb(255, 212, 229);
+
+    text-shadow:
+        0 4px 0 #e77ba7,
+        /*0 10px 18px rgba(239, 124, 216, 0.1);*/
+        0 10px 18px rgba(239, 124, 216, 3);
+}
+
+
+.gradiente-borde{
+    background: linear-gradient(
+        to right,
+        #FFD6E7,
+        #FFF0B8,
+        #D7F7D0,
+        #D6E8FF
+    );
+}
