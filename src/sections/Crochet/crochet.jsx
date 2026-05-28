@@ -1,23 +1,18 @@
 import { LetrasDesign } from "../letras-desing"
+import { LetrasDesignHard } from "../letras-desing-hard"
 import { useState } from "react"
 import { ChevronRight } from "lucide-react";
-import {
-    Ruler,
-    Clock3,
-    Star,
-    Package,
-    Palette,
-} from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 
 const amigurumis = [
     {
         img: "/crochet/abeja-llavero.jpg",
-        titulo: "Llavero de abejita",
+        titulo: "Llavero abejita",
         tamano: "10 cm",
         tiempo: "1 día",
         dificultad: "★★☆☆☆",
         materiales: "Hilo algodón",
-        colores: ["#F6D32D", "#FFF8E7", "#1F1F1F"],
+        colores: ["#F6D32D", "#FFF8E7", "#1F1F1F", "#f3a3d3"],
         descripcion: "Una pequeña abeja tejida con mucho cariño, perfecta para llevar contigo y darle un toque adorable a tus llaves o mochila."
     },
 
@@ -133,7 +128,7 @@ const amigurumis = [
 
     {
         img: "/crochet/pollo-llavero.jpg",
-        titulo: "Llavero de pollito",
+        titulo: "Llavero pollito",
         tamano: "9 cm",
         tiempo: "1 día",
         dificultad: "★★☆☆☆",
@@ -234,15 +229,64 @@ export const Crochet = () => {
     ? 0
     : actual+1
 
+
+    const info = [
+        {
+            icono: "/crochet/iconos/paleta.png",
+            label: "Colores",
+
+            valor: (
+                <div className="flex gap-3">
+
+                    {amigurumis[actual].colores.map((color) => (
+
+                        <div
+                            key={color}
+                            className="w-5 h-5 rounded-full border border-white/40"
+                            style={{ backgroundColor: color }}
+                        />
+
+                    ))}
+
+                </div>
+            )
+        },
+
+        {
+            icono: "/crochet/iconos/tamaño.png",
+            label: "Tamaño",
+            valor: amigurumis[actual].tamano
+        },
+
+        {
+            icono: "/crochet/iconos/tiempo.png",
+            label: "Tiempo",
+            valor: amigurumis[actual].tiempo
+        },
+
+        {
+            icono: "/crochet/iconos/Dificultad.png",
+            label: "Dificultad",
+            valor: amigurumis[actual].dificultad
+        },
+
+        {
+            icono: "/crochet/iconos/material.png",
+            label: "Material",
+            valor: amigurumis[actual].materiales
+        }
+    ]
+
+
     return(
-        <section className="w-full overflow-x-hidden flex flex-col pt-5">
+        <section className="w-full overflow-x-hidden flex flex-col pt-10">
 
-            <div className="py-2 gradiente-borde shadow-[0_0_20px_#ffffff]">
+            <div className="py-2 "> {/** gradiente-borde shadow-[0_0_20px_#ffffff] */}
 
-                <div className="relative h-[400px] overflow-hidden flex items-center justify-center bg-black shadow-[0_0_20px_#ffffff]">
+                <div className="relative h-[400px] overflow-hidden flex items-center justify-center  ">
 
                     <video
-                    className="absolute inset-0 w-full h-full object-cover object-[10%_20%] opacity-60"
+                    className="absolute inset-0 w-full h-full object-cover object-[10%_20%] opacity-100"
                     autoPlay
                     muted
                     loop
@@ -250,15 +294,15 @@ export const Crochet = () => {
                     >
                         <source src="/crochet/video.mp4" type="video/mp4"/>
                     </video>
-
+{/** 
                     <h2
                     style={{ fontFamily: "var(--title-type)" }}
                     className="z-30 text-8xl"
                     >
                         <LetrasDesign texto="PROYECTOS"/>
                     </h2>
-
-                    <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white/30 blur-3xl"/>
+*/}
+                    
 
                 </div>
 
@@ -266,146 +310,186 @@ export const Crochet = () => {
 
 
 
-            <div className="bg-purple-500 grid grid-cols-[60%_40%]">
+            <div className="  grid grid-cols-[60%_40%]  pt-6">
 
                 {/* CARRUSEL */}
-                <div className="bg-red-500 flex justify-center">
+                <div className=" flex justify-center ">
 
-                    <div className="bg-pink-500 p-4">
+                    <div className="p-4 ">
 
-                        <div className="relative bg-green-500 w-[850px] h-[520px] ">
-                            
-                            <button className="absolute right-10 top-1/2 bg-white/70 rounded-full  p-4 -translate-y-1/2 shadow-2xl hover:scale-110 transition duration-300 hover:bg-pink-100  hover:text-white " onClick={() => setActual(
-                            actual+1 >= amigurumis.length
-                            ? 0
-                            : actual+1 )} > <ChevronRight className="w-6 h-6 text-pink-500 translate-x-1.5" />
+                        <div className="relative  w-[850px] h-[520px] ">
+
+                            <button
+                            className="absolute right-10 top-1/2 bg-white rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-110 transition duration-300 hover:bg-pink-100 hover:text-white z-20"
+                            onClick={() => setActual(
+                                actual+1 >= amigurumis.length
+                                ? 0
+                                : actual+1
+                            )}
+                            >
+
+                                <ChevronRight className="w-6 h-6 text-pink-500 "/>
+
+                            </button>
+
+
+                            <button
+                            className="absolute left-3 top-1/2 bg-white rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-110 transition duration-300 hover:bg-pink-100 hover:text-white z-20"
+                            onClick={() => setActual(
+                                actual-1 == -1 
+                                ? amigurumis.length - 1
+                                : actual-1
+                            )}
+                            >
+
+                                <ChevronLeft className="w-6 h-6 text-pink-500 "/>
+
                             </button>
 
                             
-                            
 
-                        
-                        <div className="absolute left-[5%] top-[50%] -translate-y-1/2 z-10 bg-black ">
 
-                            <div className=" w-[350px] h-[350px] flex items-center justify-center">
-                                <img className="w-full h-full object-cover opacity-25" src={amigurumis[izquierda].img} alt=""/>
+
+                            {/* IZQUIERDA */}
+                            <div className="absolute left-[5%] top-[50%] -translate-y-1/2 z-10 bg-black rounded-3xl shadow-[0_0_20px_var(--header-shadow-color)] ">
+
+                                <div className="w-[350px] h-[350px] flex items-center justify-center">
+
+                                    <img
+                                    className="w-full h-full object-cover opacity-25 rounded-3xl"
+                                    src={amigurumis[izquierda].img}
+                                    alt=""
+                                    />
+
+                                </div>
+
+                            </div>
+
+
+
+                            {/* CENTRO */}
+                            <div className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 z-20 bg-white rounded-3xl shadow-[0_0_20px_var(--header-shadow-color)] ">
+
+                                <div className="w-[320px] h-[480px] flex items-center justify-center ">
+
+                                    <img
+                                    className="w-full h-full object-cover rounded-3xl"
+                                    src={amigurumis[centro].img}
+                                    alt=""
+                                    />
+
+                                </div>
+
+                            </div>
+
+
+
+                            {/* DERECHA */}
+                            <div className="absolute left-[50%] top-[50%] -translate-y-1/2 z-10 bg-black rounded-3xl shadow-[0_0_20px_var(--header-shadow-color)] ">
+
+                                <div className="w-[350px] h-[350px] flex items-center justify-center">
+
+                                    <img
+                                    className="w-full h-full object-cover opacity-25 rounded-3xl"
+                                    src={amigurumis[derecha].img}
+                                    alt=""
+                                    />
+
+                                </div>
+
                             </div>
 
                         </div>
 
-
-                        
-                        <div className=" absolute  left-1/2  top-[50%] -translate-x-1/2 -translate-y-1/2  z-20  bg-blue-500">
-
-                            <div className=" w-[320px] h-[480px] flex items-center justify-center">
-
-                                <img className="w-full h-full object-cover " src={amigurumis[centro].img} alt=""/>
-                            </div>
-
-                        </div>
-
-
-                        {/* DERECHA */}
-                        <div className="absolute left-[50%] top-[50%] -translate-y-1/2 z-10 bg-black">
-
-                            <div className=" w-[350px] h-[350px] flex items-center justify-center">
-                                <img className="w-full h-full object-cover  opacity-25" src={amigurumis[derecha].img} alt=""/>
-                            </div>
-
-                        </div>
-                        
+                    </div>
 
                 </div>
 
-            </div>
-
-        </div>
 
 
 
-                {/* TEXTO */}
-                <div className="bg-pink-300 px-10 py-7 ">
 
-                    <div className="relative bg-blue-500 w-full h-full ">
 
-                        <div className="flex flex-col gap-4">
+
+
+
+
+
+
+                {/* informacion */}
+                <div className="px-7 py-4">
+
+                    <div className="relative rounded-3xl shadow-[0_0_10px_var(--header-shadow-up-color)]  w-full h-full">
+
+                        <div className="absolute inset-0 h-full w-full bg-white opacity-30 -z-20 rounded-3xl"/>
+
+                        <div className="flex flex-col   gap-2">
 
                             {/* titulo */}
-                            <div className="flex py-5  justify-center bg-red-500 text-5xl text-[var(--header-text-color)]">
-                                <p>{amigurumis[actual].titulo} ♡</p>
-                            </div>
-
-                            <div className="flex">
-
-                                <div className="flex flex-col">
-
-                                    {/*COLORES */}
-                                    <div className="flex items-center">
-                                        <div className="w-10 h-10 bg-white ">
-                                            <img className="h-full w-full" src="/crochet/iconos/paleta.png" alt="" />
-                                        </div>
-                                        <p>Colores</p>
-                                        <div className="flex gap-3">
-                                        {amigurumis[actual].colores.map((color) => (
-                                            <div
-                                                className="w-5 h-5 rounded-full border border-white/40"
-                                                style={{ backgroundColor: color }}
-                                            />
-                                        ))}
-                                        </div>
-                                    </div>
-                                    
-                                    {/*TAMAÑO */}
-                                    <div className="flex items-center">
-                                        <div className="w-10 h-10 bg-white ">
-                                            <img className="h-full w-full" src="/crochet/iconos/tamaño.png" alt="" />
-                                        </div>
-                                        <p>Tamaño</p>
-                                        <p>{amigurumis[actual].tamano}</p>
-                                    </div>
-
-                                    {/*TIEMPO */}
-                                    <div className="flex items-center">
-                                        <div className="w-10 h-10 bg-white ">
-                                            <img className="h-full w-full" src="/crochet/iconos/tiempo.png" alt="" />
-                                        </div>
-                                        <p>Tiempo</p>
-                                        <p>{amigurumis[actual].tiempo}</p>
-                                    </div>
-
-
-                                    {/*DIFICULTAD */}
-                                    <div className="flex items-center">
-                                        <div className="w-10 h-10 bg-white ">
-                                            <img className="h-full w-full" src="/crochet/iconos/Dificultad.png" alt="" />
-                                        </div>
-                                        <p>tamaño</p>
-                                        <p>{amigurumis[actual].dificultad}</p>
-                                    </div>
-
-
-                                    {/*MATERIALES */}
-                                    <div className="flex items-center">
-                                        <div className="w-10 h-10 bg-white ">
-                                            <img className="h-full w-full" src="/crochet/iconos/material.png" alt="" />
-                                        </div>
-                                        <p>Material</p>
-                                        <p>{amigurumis[actual].material}</p>
-                                    </div>
-                                    
-                                    <p>tiempo</p>
-                                    <p>dificultad</p>
-                                    <p>materiales</p>
-                                </div>
-
+                            <div className="flex py-5 justify-center text-5xl text-pink-500">
                                 
                                 
+                                <h2 className="relative px-6 py-2 " style={{fontFamily:"var(--title-type)"}}>
+                                    
+                                    <LetrasDesignHard texto={`${amigurumis[actual].titulo} ♡`}/>
+                                    
+                                    
+                                </h2>
 
                             </div>
+
+
+
+                            {/* INFO */}
+                            <div className="flex flex-col gap-4 px-7 ">
+
+                                {info.map((dato) => (
+
+                                    <div
+                                    key={dato.label}
+                                    className="flex items-center gap-12 border-b border-[var(--header-shadow-color)] "
+                                    >
+                                        <div className="flex items-center gap-2">
+                                            {/* icono */}
+                                            <div className="w-10 h-10 shrink-0">
+
+                                                <img
+                                                className="w-full h-full object-contain"
+                                                src={dato.icono}
+                                                alt=""
+                                                />
+
+                                            </div>
+
+
+                                            {/* label */}
+                                            <p className="min-w-[120px]">
+                                                {dato.label}
+                                            </p>
+                                        </div>
+
+
+                                        {/* valor */}
+                                        <div>
+                                            {dato.valor}
+                                        </div>
+
+                                    </div>
+
+                                ))}
+
+                            </div>
+
+
 
                             {/* descripcion */}
-                            <div className="">
-                                <p>{amigurumis[actual].descripcion}</p>
+                            <div className="pt-4 px-5">
+                                <h3 className="pl-3 pb-1 text-2xl" style={{ fontFamily: "var(--title-type)" }}>Descripción:</h3>
+                                <p className="relative p-2 text-justify border border-[var(--header-shadow-color)] border-1 rounded-3xl ">
+                                    
+                                    {amigurumis[actual].descripcion}
+                                </p>
+
                             </div>
 
                         </div>
@@ -418,22 +502,8 @@ export const Crochet = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
             <div className="bg-blue-500">
-
                 <p>l</p>
-
             </div>
 
         </section>
