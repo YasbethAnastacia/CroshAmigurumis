@@ -1,195 +1,221 @@
 import { LetrasDesign } from "../letras-desing"
 import { useState } from "react"
 import { ChevronRight } from "lucide-react";
+import {
+    Ruler,
+    Clock3,
+    Star,
+    Package,
+    Palette,
+} from "lucide-react";
 
 const amigurumis = [
     {
         img: "/crochet/abeja-llavero.jpg",
-        titulo: "Abeja Llavero",
-        tamaño: "10 cm",
+        titulo: "Llavero de abejita",
+        tamano: "10 cm",
         tiempo: "1 día",
         dificultad: "★★☆☆☆",
         materiales: "Hilo algodón",
+        colores: ["#F6D32D", "#FFF8E7", "#1F1F1F"],
         descripcion: "Una pequeña abeja tejida con mucho cariño, perfecta para llevar contigo y darle un toque adorable a tus llaves o mochila."
     },
 
     {
         img: "/crochet/bestia.jpg",
         titulo: "Bestia",
-        tamaño: "25 cm",
+        tamano: "25 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
         materiales: "Estambre suave",
+        colores: ["#1d6ef1", "#b58560", "#f1f441"],
         descripcion: "Inspirado en criaturas fantásticas, este amigurumi combina ternura y personalidad en cada detalle tejido a mano."
     },
 
     {
         img: "/crochet/cabra.jpg",
         titulo: "Cabra",
-        tamaño: "22 cm",
+        tamano: "22 cm",
         tiempo: "3 días",
         dificultad: "★★★☆☆",
         materiales: "Hilo algodón",
+        colores: ["#F3F4F6", "#db1818", "#2F2F2F"],
         descripcion: "Una cabrita suave y tierna creada puntada por puntada para transmitir una vibra cálida y acogedora."
     },
 
     {
         img: "/crochet/captus.jpg",
         titulo: "Captus",
-        tamaño: "15 cm",
+        tamano: "15 cm",
         tiempo: "1 día",
         dificultad: "★★☆☆☆",
         materiales: "Estambre verde",
+        colores: ["#6BAF5E", "#A0522D", "#181716"],
         descripcion: "Un pequeño cactus tejido con estilo cute y detalles delicados, ideal para decorar cualquier espacio."
     },
 
     {
         img: "/crochet/deporte.jpg",
         titulo: "Deportista",
-        tamaño: "24 cm",
+        tamano: "24 cm",
         tiempo: "3 días",
         dificultad: "★★★★☆",
         materiales: "Hilo algodón",
+        colores: ["#2563EB", "#111827", "#F59E0B"],
         descripcion: "Diseñado con una temática deportiva llena de energía y personalidad, tejido completamente a mano."
     },
 
     {
         img: "/crochet/doctora.jpg",
         titulo: "Doctora",
-        tamaño: "26 cm",
+        tamano: "26 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
         materiales: "Hilo algodón",
+        colores: ["#4F46E5", "#F472B6", "#f1f1f0"],
         descripcion: "Una muñeca doctora tejida con dedicación y detalles cuidadosamente elaborados para darle vida y ternura."
     },
 
     {
         img: "/crochet/doctora-rubia.jpg",
-        titulo: "Doctora Rubia",
-        tamaño: "26 cm",
+        titulo: "Doctora ",
+        tamano: "26 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
         materiales: "Hilo algodón",
+        colores: ["#FACC15", "#F9A8D4", "#F3F4F6"],
         descripcion: "Versión especial de la doctora con una estética dulce y colores suaves que resaltan su encanto artesanal."
     },
 
     {
         img: "/crochet/Iron.jpg",
-        titulo: "Iron",
-        tamaño: "23 cm",
+        titulo: "Iron Man",
+        tamano: "23 cm",
         tiempo: "5 días",
         dificultad: "★★★★★",
         materiales: "Hilo algodón",
+        colores: ["#DC2626", "#FACC15", "#374151"],
         descripcion: "Inspirado en un héroe icónico, este amigurumi mezcla fuerza y ternura en una pieza completamente handmade."
     },
 
     {
         img: "/crochet/Mini.jpg",
-        titulo: "Mini",
-        tamaño: "18 cm",
+        titulo: "Mini Ratón",
+        tamano: "18 cm",
         tiempo: "2 días",
         dificultad: "★★★☆☆",
         materiales: "Estambre suave",
+        colores: ["#EC4899", "#f2e5af", "#111827"],
         descripcion: "Pequeñita, adorable y llena de personalidad, creada para transmitir alegría y una vibra súper kawaii."
     },
 
     {
         img: "/crochet/monito.jpg",
         titulo: "Monito",
-        tamaño: "20 cm",
+        tamano: "20 cm",
         tiempo: "2 días",
         dificultad: "★★★☆☆",
         materiales: "Hilo algodón",
+        colores: ["#DC2626", "#F5E6C8", "#111827"],
         descripcion: "Un monito tejido con expresión tierna y acabados suaves que lo hacen perfecto para decorar o regalar."
     },
 
     {
         img: "/crochet/pajaritos.jpg",
         titulo: "Pajaritos",
-        tamaño: "20 cm",
+        tamano: "20 cm",
         tiempo: "2 días",
         dificultad: "★★★☆☆",
         materiales: "Hilo algodón",
+        colores: ["#2563EB", "#84CC16", "#F8FAFC"],
         descripcion: "Una pareja de pajaritos tejidos con colores delicados y una estética acogedora llena de ternura."
     },
 
     {
         img: "/crochet/pollo-llavero.jpg",
-        titulo: "Pollo Llavero",
-        tamaño: "9 cm",
+        titulo: "Llavero de pollito",
+        tamano: "9 cm",
         tiempo: "1 día",
         dificultad: "★★☆☆☆",
         materiales: "Hilo algodón",
+        colores: ["#FACC15", "#F97316", "#111827"],
         descripcion: "Un pequeño pollito tejido a mano que añade un toque divertido y cute a cualquier accesorio."
     },
 
     {
         img: "/crochet/princesa-cafe.jpg",
-        titulo: "Princesa Café",
-        tamaño: "25 cm",
+        titulo: "Princesa Bella",
+        tamano: "25 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
         materiales: "Hilo algodón",
+        colores: ["#FACC15", "#875531", "#F5E6C8"],
         descripcion: "Inspirada en cuentos clásicos, esta princesa transmite dulzura y elegancia con cada puntada."
     },
 
     {
         img: "/crochet/princesa-negro.jpg",
-        titulo: "Princesa Negro",
-        tamaño: "25 cm",
+        titulo: "Blanca nieves",
+        tamano: "25 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
         materiales: "Hilo algodón",
+        colores: ["#111827", "#FACC15", "#DC2626"],
         descripcion: "Una princesa tejida con mucho detalle y una personalidad encantadora que resalta por su estilo único."
     },
 
     {
         img: "/crochet/princesa-rojo.jpg",
         titulo: "Princesa Roja",
-        tamaño: "25 cm",
+        tamano: "25 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
         materiales: "Hilo algodón",
+        colores: ["#DC2626", "#0F766E", "#efe178"],
         descripcion: "Colores vibrantes, detalles delicados y una vibra mágica hacen de esta princesa una pieza especial."
     },
 
     {
         img: "/crochet/princesa-rubio.jpg",
-        titulo: "Princesa Rubia",
-        tamaño: "25 cm",
+        titulo: "Princesa Aurora",
+        tamano: "25 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
         materiales: "Hilo algodón",
+        colores: ["#FACC15", "#F472B6", "#F3F4F6"],
         descripcion: "Tejida cuidadosamente para reflejar una estética suave, dulce y llena de encanto artesanal."
     },
 
     {
         img: "/crochet/ramo-violeta.jpg",
         titulo: "Ramo Violeta",
-        tamaño: "20 cm",
+        tamano: "20 cm",
         tiempo: "2 días",
         dificultad: "★★★☆☆",
         materiales: "Flores tejidas",
+        colores: ["#A855F7", "#FDE68A", "#F3F4F6"],
         descripcion: "Un delicado ramo tejido a mano que combina colores suaves y detalles florales llenos de calidez."
     },
 
     {
         img: "/crochet/unicornio.jpg",
         titulo: "Unicornio",
-        tamaño: "28 cm",
+        tamano: "28 cm",
         tiempo: "5 días",
         dificultad: "★★★★★",
         materiales: "Hilo multicolor",
+        colores: ["#129836", "#ed65a9", "#f5f3f9"],
         descripcion: "Un unicornio mágico tejido completamente a mano, lleno de colores suaves y una esencia soñadora."
     },
 
     {
         img: "/crochet/policia.jpg",
         titulo: "Policía",
-        tamaño: "24 cm",
+        tamano: "24 cm",
         tiempo: "3 días",
         dificultad: "★★★★☆",
         materiales: "Hilo algodón",
+        colores: ["#edd692", "#111827", "#F3F4F6"],
         descripcion: "Un personaje tejido con mucha personalidad y detalles únicos que resaltan su estilo divertido y adorable."
     }
 ]
@@ -302,37 +328,78 @@ export const Crochet = () => {
 
                     <div className="relative bg-blue-500 w-full h-full ">
 
-                        <div className="flex flex-col">
+                        <div className="flex flex-col gap-4">
 
                             {/* titulo */}
                             <div className="flex py-5  justify-center bg-red-500 text-5xl text-[var(--header-text-color)]">
                                 <p>{amigurumis[actual].titulo} ♡</p>
                             </div>
 
-                            {/* grid */}
-                            <div className="grid grid-cols-2">
+                            <div className="flex">
 
-                                {/* labels */}
                                 <div className="flex flex-col">
-                                    <p>Colores</p>
-                                    <p>tamaño</p>
+
+                                    {/*COLORES */}
+                                    <div className="flex items-center">
+                                        <div className="w-10 h-10 bg-white ">
+                                            <img className="h-full w-full" src="/crochet/iconos/paleta.png" alt="" />
+                                        </div>
+                                        <p>Colores</p>
+                                        <div className="flex gap-3">
+                                        {amigurumis[actual].colores.map((color) => (
+                                            <div
+                                                className="w-5 h-5 rounded-full border border-white/40"
+                                                style={{ backgroundColor: color }}
+                                            />
+                                        ))}
+                                        </div>
+                                    </div>
+                                    
+                                    {/*TAMAÑO */}
+                                    <div className="flex items-center">
+                                        <div className="w-10 h-10 bg-white ">
+                                            <img className="h-full w-full" src="/crochet/iconos/tamaño.png" alt="" />
+                                        </div>
+                                        <p>Tamaño</p>
+                                        <p>{amigurumis[actual].tamano}</p>
+                                    </div>
+
+                                    {/*TIEMPO */}
+                                    <div className="flex items-center">
+                                        <div className="w-10 h-10 bg-white ">
+                                            <img className="h-full w-full" src="/crochet/iconos/tiempo.png" alt="" />
+                                        </div>
+                                        <p>Tiempo</p>
+                                        <p>{amigurumis[actual].tiempo}</p>
+                                    </div>
+
+
+                                    {/*DIFICULTAD */}
+                                    <div className="flex items-center">
+                                        <div className="w-10 h-10 bg-white ">
+                                            <img className="h-full w-full" src="/crochet/iconos/Dificultad.png" alt="" />
+                                        </div>
+                                        <p>tamaño</p>
+                                        <p>{amigurumis[actual].dificultad}</p>
+                                    </div>
+
+
+                                    {/*MATERIALES */}
+                                    <div className="flex items-center">
+                                        <div className="w-10 h-10 bg-white ">
+                                            <img className="h-full w-full" src="/crochet/iconos/material.png" alt="" />
+                                        </div>
+                                        <p>Material</p>
+                                        <p>{amigurumis[actual].material}</p>
+                                    </div>
+                                    
                                     <p>tiempo</p>
                                     <p>dificultad</p>
                                     <p>materiales</p>
                                 </div>
 
-                                {/* valores */}
-                                <div className="flex flex-col ">
-                                    <div className="flex flex-row gap-6">
-                                        <div className="w-4 h-4 bg-pink-500"/>
-                                        <div className="w-4 h-4 bg-pink-500"/>
-                                        <div className="w-4 h-4 bg-pink-500"/>
-                                    </div>
-                                    <p>{amigurumis[actual].tamaño}</p>
-                                    <p>{amigurumis[actual].tiempo}</p>
-                                    <p>{amigurumis[actual].dificultad}</p>
-                                    <p>{amigurumis[actual].materiales}</p>
-                                </div>
+                                
+                                
 
                             </div>
 
