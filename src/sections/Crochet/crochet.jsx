@@ -351,7 +351,7 @@ export const Crochet = () => {
 
 
                             {/* IZQUIERDA */}
-                            <div className="absolute left-[5%] top-[50%] -translate-y-1/2 z-10 bg-black rounded-3xl shadow-[0_0_20px_var(--header-shadow-color)] ">
+                            <div className="absolute left-[5%] top-[50%] -translate-y-1/2 z-10 bg-black rounded-3xl shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black]">
 
                                 <div className="w-[350px] h-[350px] flex items-center justify-center">
 
@@ -368,7 +368,7 @@ export const Crochet = () => {
 
 
                             {/* CENTRO */}
-                            <div className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 z-20 bg-white rounded-3xl shadow-[0_0_20px_var(--header-shadow-color)] ">
+                            <div className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 z-20 bg-white rounded-3xl shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black] ">
 
                                 <div className="w-[320px] h-[480px] flex items-center justify-center ">
 
@@ -385,7 +385,7 @@ export const Crochet = () => {
 
 
                             {/* DERECHA */}
-                            <div className="absolute left-[50%] top-[50%] -translate-y-1/2 z-10 bg-black rounded-3xl shadow-[0_0_20px_var(--header-shadow-color)] ">
+                            <div className="absolute left-[50%] top-[50%] -translate-y-1/2 z-10 bg-black rounded-3xl shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black] ">
 
                                 <div className="w-[350px] h-[350px] flex items-center justify-center">
 
@@ -429,11 +429,8 @@ export const Crochet = () => {
                             <div className="flex py-5 justify-center text-5xl text-pink-500">
                                 
                                 
-                                <h2 className="relative px-6 py-2 " style={{fontFamily:"var(--title-type)"}}>
-                                    
+                                <h2 className="relative px-6 py-2  " style={{fontFamily:"var(--title-type)",WebkitTextStroke: "1px white"}}>
                                     <LetrasDesignHard texto={`${amigurumis[actual].titulo} ♡`}/>
-                                    
-                                    
                                 </h2>
 
                             </div>
@@ -484,7 +481,7 @@ export const Crochet = () => {
 
                             {/* descripcion */}
                             <div className="pt-4 px-5">
-                                <h3 className="pl-3 pb-1 text-2xl" style={{ fontFamily: "var(--title-type)" }}>Descripción:</h3>
+                                <h3 className="pl-3 pb-1 text-2xl " style={{ fontFamily: "var(--title-type)" }}>Descripción:</h3>
                                 <p className="relative p-2 text-justify border border-[var(--header-shadow-color)] border-1 rounded-3xl ">
                                     
                                     {amigurumis[actual].descripcion}
@@ -502,9 +499,157 @@ export const Crochet = () => {
 
 
 
-            <div className="bg-blue-500">
-                <p>l</p>
+            <div className="relative overflow-hidden">
+
+    {/* LEFT FADE */}
+    <div
+        className="
+            absolute
+            left-0
+            top-0
+            bottom-0
+            w-32
+
+            bg-gradient-to-r
+            from-background
+            to-transparent
+
+            z-10
+        "
+    />
+
+
+
+    {/* RIGHT FADE */}
+    <div
+        className="
+            absolute
+            right-0
+            top-0
+            bottom-0
+            w-32
+
+            bg-gradient-to-l
+            from-background
+            to-transparent
+
+            z-10
+        "
+    />
+
+
+
+    {/* ======================================================
+        MARQUEE
+    ====================================================== */}
+
+    <div className="flex animate-marquee">
+
+        {[
+            {
+                name: "Bestia",
+                image: "/crochet/render/bestia-render.png",
+            },
+
+            {
+                name: "Captus",
+                image: "/crochet/render/captus-render.png",
+            },
+
+            {
+                name: "doctora",
+                image: "/crochet/render/doctora-render.png",
+            },
+
+            {
+                name: "flores",
+                image: "/crochet/render/flores-render.png",
+            },
+
+            {
+                name: "pajaros",
+                image: "/crochet/render/pajaritos-render.png",
+            },
+
+            {
+                name: "princesa",
+                image: "/crochet/render/princesa-render.png",
+            },
+
+            {
+                name: "reno",
+                image: "/crochet/render/reno-render.png",
+            },
+
+            {
+                name: "unicornio",
+                image: "/crochet/render/unicornio-render.png",
+            },
+
+        ].concat([
+            {
+                name: "Bestia",
+                image: "/crochet/render/bestia-render.png",
+            },
+
+            {
+                name: "Captus",
+                image: "/crochet/render/captus-render.png",
+            },
+
+            {
+                name: "doctora",
+                image: "/crochet/render/doctora-render.png",
+            },
+
+            {
+                name: "flores",
+                image: "/crochet/render/flores-render.png",
+            },
+
+            {
+                name: "pajaros",
+                image: "/crochet/render/pajaritos-render.png",
+            },
+
+            {
+                name: "princesa",
+                image: "/crochet/render/princesa-render.png",
+            },
+
+            {
+                name: "reno",
+                image: "/crochet/render/reno-render.png",
+            },
+
+            {
+                name: "unicornio",
+                image: "/crochet/render/unicornio-render.png",
+            },
+        ]).map((skill, idx) => (
+
+            <div
+                key={idx}
+                className="
+                    flex-shrink-0
+                    px-8
+                    py-4
+                "
+            >
+
+                <img
+                    src={skill.image}
+                    alt={skill.name}
+                    className="w-20 h-20 object-contain"
+                />
+
             </div>
+
+        ))}
+
+    </div>
+
+</div>
 
         </section>
     )

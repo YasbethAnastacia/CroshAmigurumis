@@ -1,37 +1,35 @@
 export const LetrasDesignHard = ({ texto }) => {
 
     const colores = [
-        "text-pink-500",
-        "text-purple-500",
-        "text-blue-500",
-        "text-green-500",
-        "text-yellow-500",
-        "text-rose-500",
-        "text-cyan-500",
+        "#FF4FA3", // hot pink suave
+        "#FF66B2", // bubblegum
+        "#FF85C2", // rosa algodón
+        "#FF5DA2", // rosa intenso
+        "#E75480", // dark pink elegante
+        "#FF9ECF", // pastel fuerte
+        "#D9468D", // magenta rosado
+        "#FF3D81", // pink vibrante
     ];
 
-    const letras = texto.split("").map((char,index)=>({
-
+    const letras = texto.split("").map((char, index) => ({
         char,
-
         color: colores[index % colores.length]
-
     }));
 
-
-    return(
+    return (
         <>
-            {letras.map((letra,index)=>(
+            {letras.map((letra, index) => (
 
                 <span
                     key={index}
-                    className={`${letra.color} `}
+                    style={{
+                        color: letra.color
+                    }}
                 >
                     {letra.char}
                 </span>
 
             ))}
         </>
-    )
-
-}
+    );
+};
