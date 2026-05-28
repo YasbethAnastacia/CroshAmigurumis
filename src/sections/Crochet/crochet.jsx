@@ -277,6 +277,13 @@ export const Crochet = () => {
         }
     ]
 
+    const gradienteStyle = {
+    backgroundImage: `linear-gradient(
+        135deg,
+        ${amigurumis[actual].colores.join(",")}
+    )`,
+}
+    
 
     return(
         <section className="w-full overflow-x-hidden flex flex-col pt-10">
@@ -320,7 +327,7 @@ export const Crochet = () => {
                         <div className="relative  w-[850px] h-[520px] ">
 
                             <button
-                            className="absolute right-10 top-1/2 bg-white rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-110 transition duration-300 hover:bg-pink-100 hover:text-white z-20"
+                            className="absolute right-10 top-1/2  rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-120 transition duration-300  z-20 hover:shadow-[0_0_20px_rgba(255,255,255,0.8)]" style={gradienteStyle}
                             onClick={() => setActual(
                                 actual+1 >= amigurumis.length
                                 ? 0
@@ -328,13 +335,13 @@ export const Crochet = () => {
                             )}
                             >
 
-                                <ChevronRight className="w-6 h-6 text-pink-500 "/>
+                                <ChevronRight className="w-6 h-6 text-white  "/>
 
                             </button>
 
 
                             <button
-                            className="absolute left-3 top-1/2 bg-white rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-110 transition duration-300 hover:bg-pink-100 hover:text-white z-20"
+                            className="absolute left-3 top-1/2  rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-120 transition duration-300 z-20 hover:shadow-[0_0_20px_rgba(255,255,255,0.8)]" style={gradienteStyle}
                             onClick={() => setActual(
                                 actual-1 == -1 
                                 ? amigurumis.length - 1
@@ -342,7 +349,7 @@ export const Crochet = () => {
                             )}
                             >
 
-                                <ChevronLeft className="w-6 h-6 text-pink-500 "/>
+                                <ChevronLeft className="w-6 h-6 text-white "/>
 
                             </button>
 
@@ -351,37 +358,19 @@ export const Crochet = () => {
 
 
                             {/* IZQUIERDA */}
-                            <div className="absolute left-[5%] top-[50%] -translate-y-1/2 z-10 bg-black rounded-3xl shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black]">
+                            <div className=" absolute left-[5%] top-[50%] -translate-y-1/2 z-10 p-[5px] rounded-3xl" style={gradienteStyle}>
 
-                                <div className="w-[350px] h-[350px] flex items-center justify-center">
+                                <div className="bg-black rounded-[20px] shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black]">
 
-                                    <img
-                                    className="w-full h-full object-cover opacity-25 rounded-3xl"
-                                    src={amigurumis[izquierda].img}
-                                    alt=""
-                                    />
+                                    <div className="w-[350px] h-[350px] flex items-center justify-center">
 
-                                </div>
+                                        <img className="w-full h-full object-cover opacity-25 rounded-[20px]" src={amigurumis[izquierda].img} alt="" />
 
-                            </div>
-
-
-
-                            {/* CENTRO */}
-                            <div className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 z-20 bg-white rounded-3xl shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black] ">
-
-                                <div className="w-[320px] h-[480px] flex items-center justify-center ">
-
-                                    <img
-                                    className="w-full h-full object-cover rounded-3xl"
-                                    src={amigurumis[centro].img}
-                                    alt=""
-                                    />
+                                    </div>
 
                                 </div>
 
                             </div>
-
 
 
                             {/* DERECHA */}
@@ -392,6 +381,21 @@ export const Crochet = () => {
                                     <img
                                     className="w-full h-full object-cover opacity-25 rounded-3xl"
                                     src={amigurumis[derecha].img}
+                                    alt=""
+                                    />
+
+                                </div>
+
+                            </div>
+
+                            {/* CENTRO */}
+                            <div className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 z-20  rounded-full hover:scale-120  p-3 " style={gradienteStyle}>
+
+                                <div className="w-[320px] h-[480px] flex items-center justify-center ">
+
+                                    <img
+                                    className="w-full h-full object-cover rounded-full"
+                                    src={amigurumis[centro].img}
                                     alt=""
                                     />
 
@@ -429,8 +433,9 @@ export const Crochet = () => {
                             <div className="flex py-5 justify-center text-5xl text-pink-500">
                                 
                                 
-                                <h2 className="relative px-6 py-2  " style={{fontFamily:"var(--title-type)",WebkitTextStroke: "1px white"}}>
-                                    <LetrasDesignHard texto={`${amigurumis[actual].titulo} ♡`}/>
+                                <h2 className=" text-5xl font-bold bg-clip-text text-transparent " 
+                                style={{...gradienteStyle, fontFamily: "var(--title-type)", WebkitTextStroke: "1px white", }}>
+                                    {amigurumis[actual].titulo} ♡
                                 </h2>
 
                             </div>

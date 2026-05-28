@@ -74,3 +74,13 @@ body {
     display: flex;
     animation: marquee 25s linear infinite;
 }
+
+::selection {
+    background: #ff7cc8;
+    color: white;
+}
+
+::-moz-selection {
+    background: #ff7cc8;
+    color: white;
+}

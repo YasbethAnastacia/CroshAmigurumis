@@ -39,7 +39,7 @@ export const Inicio = () => {
                     
 
 
-                    <div className="  whitespace-pre-line z-60 px-12 text-base ">
+                    <div className="  whitespace-pre-line z-60 px-12 text-base text-justify">
                             <div className="relative p-6 rounded-2xl shadow-[0_0_10px_var(--header-shadow-up-color)]">
                                 <p >{`Hola, soy Alejandra Hernández, tengo 25 años, soy mexicana y contadora. Desde siempre me han gustado las manualidades, la creatividad y encontrar formas de expresar mis ideas a través del arte y las cosas hechas a mano.
 
