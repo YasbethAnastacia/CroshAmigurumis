@@ -1,9 +1,6 @@
 const activities = [
 
-    {
-        title: "Tejer amigurumis",
-        image: "/Actividades/carrusel/amigurumis.png",
-    },
+    
 
     {
         title: "Viajar por el mundo",

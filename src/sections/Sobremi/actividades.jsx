@@ -3,7 +3,7 @@ import { DecoracionI } from "./decoracionI";
 import { DecoracionD } from "./decoracionD";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import { LetrasDesignHard } from "../letras-desing-hard"
+import { LetrasDesign } from "../letras-desing"
 
 export const Actividades = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -43,14 +43,14 @@ export const Actividades = () => {
 
                 <DecoracionD />
 
-                <div className=" p-8 rounded-[2rem] shadow-[0_0px_10px_#ffffff]"> {/* bg-[#F6D6DC] shadow-[0_10px_20px_#826876]*/}
+                <div className="flex flex-col  py-5 px-4 rounded-[2rem] shadow-[0_0px_10px_#ffffff]"> {/* bg-[#F6D6DC] shadow-[0_10px_20px_#826876]*/}
                     {/*<h2 className="text-4xl mb-6 text-center "> 
                     ¡Mis intereses!
                     </h2>*/}
-                    <h2 className="relative px-6 py-2   text-5xl  " style={{fontFamily:"var(--title-type)",WebkitTextStroke: "2px white"}}>
-                    <LetrasDesignHard texto={`Mis intereses`}/>
+                    <h2 className="text-center relative px-6 py-2  text-5xl font-bold " style={{fontFamily:"var(--title-type)",WebkitTextStroke: "1px black"}}>
+                    <LetrasDesign texto={`Mis intereses`}/>
                     </h2>
-                <div className="border-3  border-dashed  rounded-[2rem] px-3 py-4 text-justify">  
+                    <div className=" border-l border-r border-white rounded-[2rem] px-3 py-4 text-justify">  {/**border-2  border-dashed border-pink-500  */}
 
                     
 

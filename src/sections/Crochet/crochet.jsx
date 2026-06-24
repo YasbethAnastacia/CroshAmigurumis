@@ -6,14 +6,24 @@ import { ChevronLeft } from "lucide-react";
 
 const amigurumis = [
     {
-        img: "/crochet/abeja-llavero.jpg",
-        titulo: "Llavero abejita",
-        tamano: "10 cm",
+        img: "/crochet/pollo-llavero.jpeg",
+        titulo: "Pollo",
+        tamano: "9 cm",
         tiempo: "1 día",
         dificultad: "★★☆☆☆",
         materiales: "Hilo algodón",
-        colores: ["#F6D32D", "#FFF8E7", "#1F1F1F", "#f3a3d3"],
-        descripcion: "Una pequeña abeja tejida con mucho cariño, perfecta para llevar contigo y darle un toque adorable a tus llaves o mochila."
+        colores: ["#FACC15", "#F97316", "#111827"],
+        descripcion: "Un pequeño pollito tejido a mano que añade un toque divertido y cute a cualquier accesorio."
+    },
+    {
+        img: "/crochet/ramo-violeta.jpg",
+        titulo: "Ramo Tulipanes",
+        tamano: "20 cm",
+        tiempo: "2 días",
+        dificultad: "★★★☆☆",
+        materiales: "Flores tejidas",
+        colores: ["#258625","#A855F7", "#FDE68A",  "#F3F4F6",],
+        descripcion: "Un delicado ramo tejido a mano que combina colores suaves y detalles florales llenos de calidez."
     },
 
     {
@@ -29,7 +39,7 @@ const amigurumis = [
 
     {
         img: "/crochet/cabra.jpg",
-        titulo: "Cabra",
+        titulo: "Chiva",
         tamano: "22 cm",
         tiempo: "3 días",
         dificultad: "★★★☆☆",
@@ -40,7 +50,7 @@ const amigurumis = [
 
     {
         img: "/crochet/captus.jpg",
-        titulo: "Captus",
+        titulo: "Cactus",
         tamano: "15 cm",
         tiempo: "1 día",
         dificultad: "★★☆☆☆",
@@ -51,7 +61,7 @@ const amigurumis = [
 
     {
         img: "/crochet/deporte.jpg",
-        titulo: "Deportista",
+        titulo: "Basquetbolista",
         tamano: "24 cm",
         tiempo: "3 días",
         dificultad: "★★★★☆",
@@ -62,7 +72,7 @@ const amigurumis = [
 
     {
         img: "/crochet/doctora.jpg",
-        titulo: "Doctora",
+        titulo: "Enfermera",
         tamano: "26 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
@@ -95,7 +105,7 @@ const amigurumis = [
 
     {
         img: "/crochet/Mini.jpg",
-        titulo: "Mini Ratón",
+        titulo: "Mini Mouse",
         tamano: "18 cm",
         tiempo: "2 días",
         dificultad: "★★★☆☆",
@@ -106,7 +116,7 @@ const amigurumis = [
 
     {
         img: "/crochet/monito.jpg",
-        titulo: "Monito",
+        titulo: "Nathanael Cano",
         tamano: "20 cm",
         tiempo: "2 días",
         dificultad: "★★★☆☆",
@@ -126,16 +136,6 @@ const amigurumis = [
         descripcion: "Una pareja de pajaritos tejidos con colores delicados y una estética acogedora llena de ternura."
     },
 
-    {
-        img: "/crochet/pollo-llavero.jpg",
-        titulo: "Llavero pollito",
-        tamano: "9 cm",
-        tiempo: "1 día",
-        dificultad: "★★☆☆☆",
-        materiales: "Hilo algodón",
-        colores: ["#FACC15", "#F97316", "#111827"],
-        descripcion: "Un pequeño pollito tejido a mano que añade un toque divertido y cute a cualquier accesorio."
-    },
 
     {
         img: "/crochet/princesa-cafe.jpg",
@@ -161,7 +161,7 @@ const amigurumis = [
 
     {
         img: "/crochet/princesa-rojo.jpg",
-        titulo: "Princesa Roja",
+        titulo: "Princesa Merida",
         tamano: "25 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
@@ -172,7 +172,7 @@ const amigurumis = [
 
     {
         img: "/crochet/princesa-rubio.jpg",
-        titulo: "Princesa Aurora",
+        titulo: "Bella durmiente",
         tamano: "25 cm",
         tiempo: "4 días",
         dificultad: "★★★★☆",
@@ -182,14 +182,14 @@ const amigurumis = [
     },
 
     {
-        img: "/crochet/ramo-violeta.jpg",
-        titulo: "Ramo Violeta",
-        tamano: "20 cm",
-        tiempo: "2 días",
-        dificultad: "★★★☆☆",
-        materiales: "Flores tejidas",
-        colores: ["#A855F7", "#FDE68A", "#F3F4F6"],
-        descripcion: "Un delicado ramo tejido a mano que combina colores suaves y detalles florales llenos de calidez."
+        img: "/crochet/abeja-llavero.jpg",
+        titulo: "Llavero abejita",
+        tamano: "10 cm",
+        tiempo: "1 día",
+        dificultad: "★★☆☆☆",
+        materiales: "Hilo algodón",
+        colores: ["#F6D32D", "#FFF8E7", "#1F1F1F", "#f3a3d3"],
+        descripcion: "Una pequeña abeja tejida con mucho cariño, perfecta para llevar contigo y darle un toque adorable a tus llaves o mochila."
     },
 
     {
@@ -205,7 +205,7 @@ const amigurumis = [
 
     {
         img: "/crochet/policia.jpg",
-        titulo: "Policía",
+        titulo: "Agente de la GN",
         tamano: "24 cm",
         tiempo: "3 días",
         dificultad: "★★★★☆",
@@ -290,9 +290,9 @@ export const Crochet = () => {
 
             <div className="py-2 "> {/** gradiente-borde shadow-[0_0_20px_#ffffff] */}
 
-                <div className="relative h-[400px] overflow-hidden flex items-center justify-center  ">
+                <div className="relative h-[500px] overflow-hidden flex items-center justify-center  ">
 
-                    <video
+                    {/**<video
                     className="absolute inset-0 w-full h-full object-cover object-[10%_20%] opacity-100"
                     autoPlay
                     muted
@@ -300,7 +300,9 @@ export const Crochet = () => {
                     playsInline
                     >
                         <source src="/crochet/video.mp4" type="video/mp4"/>
-                    </video>
+                    </video>*/}
+
+                    <img className="absolute inset-0 w-full h-full object-cover object-[20%_20%] opacity-100" src="/Actividades/carrusel/amigurumis-portada.png" alt="" />
 {/** 
                     <h2
                     style={{ fontFamily: "var(--title-type)" }}
@@ -373,19 +375,25 @@ export const Crochet = () => {
                             </div>
 
 
+                            
                             {/* DERECHA */}
-                            <div className="absolute left-[50%] top-[50%] -translate-y-1/2 z-10 bg-black rounded-3xl shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black] ">
+                            <div
+                                className="absolute left-[50%] top-[50%] -translate-y-1/2 z-10 p-[5px] rounded-3xl"
+                                style={gradienteStyle}
+                            >
+                                <div className="bg-black rounded-[20px] shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black]">
 
-                                <div className="w-[350px] h-[350px] flex items-center justify-center">
+                                    <div className="w-[350px] h-[350px] flex items-center justify-center">
 
-                                    <img
-                                    className="w-full h-full object-cover opacity-25 rounded-3xl"
-                                    src={amigurumis[derecha].img}
-                                    alt=""
-                                    />
+                                        <img
+                                            className="w-full h-full object-cover opacity-25 rounded-[20px]"
+                                            src={amigurumis[derecha].img}
+                                            alt=""
+                                        />
+
+                                    </div>
 
                                 </div>
-
                             </div>
 
                             {/* CENTRO */}

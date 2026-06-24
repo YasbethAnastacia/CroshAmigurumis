@@ -11,9 +11,9 @@
 :root {
     /*--font-primary:"Fuzzy Bubbles", cursive;*/
     /*--font-primary:"Indie Flower", cursive;*/
-    /*--font-primary:"Mali", cursive;*/
+    /*--font-primary:"Mali", cursive; #775757*/
     --font-primary: "Playpen Sans", cursive;
-    --font-primary-color: #775757;
+    --font-primary-color: #882e6d;
 
     --header-text-color: #ffffff;
     /**/
@@ -23,7 +23,7 @@
     --background: #FF87D0;
     /*También es el color de contactame, y el las letras del hover el header*/
     --title-type: "DynaPuff", cursive;
-
+    --negro:rgb(252, 248, 248); 
 
 
 }
@@ -57,6 +57,34 @@ body {
         #D7F7D0,
         #D6E8FF
     );
+}
+
+.gradiente-borde2{
+    background: linear-gradient(
+        to right,
+        #f1acc9,
+        #f2e3ab,
+        #beebb4,
+        #bed5f2,
+        #ebbadf,
+        #c4eaf3,
+        #f7c7ca
+    );
+}
+
+
+
+.gradiente-borde-text{
+    background: linear-gradient(
+        to right,
+        #FFD6E7,
+        #FFF0B8,
+        #D7F7D0,
+        #D6E8FF
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 @keyframes marquee {

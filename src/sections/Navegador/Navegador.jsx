@@ -1,27 +1,74 @@
-export const Navegador = () => {
+import { useEffect, useState } from "react";
 
-return (
+export const Navegador = ({ interesesRef }) => {
 
-    <header className="absolute top-0 left-0 w-full flex justify-between pt-5 z-20 border-2 border-red-500 items-center text-[var(--header-text-color)]">{/**el pt-10 es por mientras */}
-        <p className="ml-7 font-[var(--header-type-letter)] text-2xl">SC</p>
+    const [fijo, setFijo] = useState(false);
 
-        <div className="relative flex items-center  gap-25  rounded-full  px-25  shadow-[0_0_10px_var(--header-shadow-color)] py-2"> 
-            <div className="absolute inset-0  rounded-full shadow-[0_0_10px_var(--header-shadow-up-color)] pointer-events-none"/>
-            
-                <a className=" " href="" >Inicio</a>
-                <a className=" " href="" >Sobre mí</a>
-                <a className=" " href="" >Proyectos</a>
-        </div>
+    useEffect(() => {
 
-        <div className=" mr-7 rounded-full shadow-[0_0_25px_var(--header-shadow-color)]">
+        const handleScroll = () => {
 
-            <a className=" block py-2 px-6 rounded-full shadow-[0_0_20px_var(--header-shadow-up-color)]  bg-[var(--background)]"href="">Contactame ♡</a>
+            if (!interesesRef?.current) return;
 
-        </div>
-        
+            const posicionIntereses = interesesRef.current.offsetTop;
 
-    </header>
+            setFijo(window.scrollY >= posicionIntereses - 100);
+        };
 
-)
+        window.addEventListener("scroll", handleScroll);
 
-}
+        return () => window.removeEventListener("scroll", handleScroll);
+
+    }, [interesesRef]);
+
+    return (
+        <header
+            className={`
+                left-0 w-full px-5 
+                transition-all duration-300
+                ${
+                    fijo
+                        ? "fixed top-0 py-4 z-50 gradiente-borde2  backdrop-blur-md text-[var(--font-primary-color)] "
+                        : "absolute top-0 pt-5 z-20 text-[var(--header-text-color)]"
+                }
+            `}
+        >
+            <div className="grid grid-cols-3 items-center">
+
+                {/* Logo */}
+                <div className="justify-self-start">
+                    <p className="font-[var(--header-type-letter)] text-2xl">
+                        SC
+                    </p>
+                </div>
+
+                {/* Menú  ${fijo ? "" : ""}*/}
+                <div className="justify-self-center">
+                    <div className={`relative flex items-center gap-15 rounded-full px-15 py-2  ${fijo ? "bg-white " : ""}`}>
+
+                        <div className={`absolute inset-0 rounded-full  pointer-events-none ${fijo ? "" : "border-b-3  "}`}  />
+
+
+                        <a href="">INICIO</a>
+                        <a href="">SOBRE MÍ</a>
+                        <a href="">PROYECTOS</a>
+
+                    </div>
+                </div>
+
+                {/* Botón */}
+                <div className="justify-self-end">
+                    <div className="rounded-full ">
+
+                        <a className={`block py-2 px-6 rounded-full   ${fijo ? "bg-white" : "shadow-[0_0_20px_var(--header-shadow-up-color)] bg-[var(--background)]"}`} href="">
+                            CONTACTAME ♡
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </header>
+    );
+};
