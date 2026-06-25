@@ -1,4 +1,4 @@
-import {Navegador} from "./sections/Navegador/Navegador";
+
 import {Inicio} from "./sections/Inicio/Inicio";
 import {Actividades} from "./sections/Sobremi/actividades";
 import { Fondos } from "./sections/Fondos/fondo"
@@ -11,7 +11,7 @@ function App() {
     <div className="min-h-screen overflow-x-hidden">
       
       <Fondos />
-      <Navegador />
+      
 
       <main>
         <Inicio />
