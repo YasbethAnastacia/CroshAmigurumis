@@ -7,7 +7,7 @@ export const Inicio = () => {
 
 
     return (
-        <section className="relative  min-h-screen overflow-x-hidden  ">
+        <section className="relative   overflow-x-hidden  ">
         <FondoInicio />
 
             
@@ -20,13 +20,13 @@ export const Inicio = () => {
                     <div className="grid grid-cols-5 lg:flex lg:flex-col ">
                         
                         <h1 className=" flex flex-col  items-center xl:items-start -rotate-1 col-span-5" style={{ fontFamily: "var(--title-type)" }}>
-                            <div className="titulo-puntadas xl:pl-20 text-[clamp(4.75rem,7vw,6rem)] leading-none " >Puntadas ... ♡</div>
+                            <div className="titulo-puntadas xl:pl-20 text-[clamp(4.5rem,7vw,6rem)] leading-none " >Puntadas ... ♡</div>
 
-                            <div className="xl:pl-40 text-[clamp(3.50rem,4.0vw,4.5rem)] leading-none text-[var(--header-text-color)]" style={{
+                            <div className="xl:pl-40 text-[clamp(3.30rem,4.0vw,4.5rem)] leading-none text-[var(--header-text-color)]" style={{
                             textShadow:"0 4px 10px rgba(0,0,0,.3)"
                             }}>hechas de </div>
 
-                            <div className="xl:pl-55 text-[clamp(3.5rem,4.0vw,4.5rem)] leading-none text-[var(--header-text-color)] "style={{
+                            <div className="xl:pl-55 text-[clamp(3.3rem,4.0vw,4.5rem)] leading-none text-[var(--header-text-color)] "style={{
                                 textShadow:"0 4px 10px rgba(0,0,0,.3)"
                                 }}>amor y pasión</div>
                         </h1>

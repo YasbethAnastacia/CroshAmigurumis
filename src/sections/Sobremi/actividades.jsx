@@ -11,19 +11,19 @@ export const Actividades = () => {
     return (
         
 
-        <section className="min-h-screen container mx-auto relative overflow-hidden px-4 md:px-12 "> 
+        <section className="w-full max-w-[1700px] mx-auto px-3 lg:px-6 xl:px-16"> 
         
-        <div className="relative flex flex-col px-10 pt-15  border-2 border-[var(--header-text-color)] rounded-[25px]">
+        <div className="relative flex flex-col lg:px-10 pt-10  border-2 border-[var(--header-text-color)] rounded-[25px] ">
 
         {/* <img className="absolute inset-0 rounded-[25px] object-cover w-full h-full overflow opacity-40 "src="./Fondos/fondo-todo.png" alt="" />*/}
 
-            <div className="flex flex-row gap-16 px-6 "> 
+            <div className="flex lg:grid lg:grid-cols-5 lg:items-center xl:grid xl:grid-cols-7 justify-center gap-10 xl:gap-15   "> 
 
-            <div className="w-[42%] flex justify-end items-center relative  pt-5"> 
+            <div className="lg:col-span-2  xl:col-span-3 hidden lg:flex lg:flex-col justify-end items-center relative  pt-5 "> 
 
                 <DecoracionI />
 
-                <div className=" gradiente-borde px-6 pt-4 pb-2 -rotate-8 rounded-2xl shadow-[15px_15px_60px_#544444]">
+                <div className=" gradiente-borde px-6 pt-4 pb-2 -rotate-8 rounded-2xl shadow-[15px_15px_60px_#544444] ">
 
                 <img
                     className="w-100"
@@ -39,11 +39,11 @@ export const Actividades = () => {
 
             </div>
 
-            <div className="relative w-[58%] flex items-center justify-center px-10"> 
+            <div className="relative lg:col-span-3   xl:col-span-4 flex items-center justify-center px-5 lg:px-10 "> 
 
                 <DecoracionD />
 
-                <div className="flex flex-col  py-5 px-4 rounded-[2rem] shadow-[0_0px_10px_#ffffff]"> {/* bg-[#F6D6DC] shadow-[0_10px_20px_#826876]*/}
+                <div className="flex flex-col  py-5 px-4 rounded-[2rem]  shadow-[0_0px_10px_#ffffff]"> {/* bg-[#F6D6DC] shadow-[0_10px_20px_#826876]*/}
                     {/*<h2 className="text-4xl mb-6 text-center "> 
                     ¡Mis intereses!
                     </h2>*/}
@@ -75,7 +75,7 @@ export const Actividades = () => {
             </div>
 
             
-            <div className="flex py-6 px-30"> 
+            <div className="flex py-6 lg:px-15 xl:px-30 "> 
 
             <button onClick={() => emblaApi?.scrollPrev()}>
                 <ChevronLeft />

@@ -18,7 +18,7 @@ const activities = [
     },
 
     {
-        title: "Practicar karate",
+        title: "Practicar taekwondo",
         image: "/Actividades/carrusel/karate.png",
     },
 
@@ -48,10 +48,7 @@ export const Carrusel = ({ emblaRef }) => {
 
     return (
 
-        <div
-            className="px-6 py-15 rounded-3xl overflow-hidden"
-            ref={emblaRef}
-        >
+        <div className="px-6 py-15 rounded-3xl overflow-hidden " ref={emblaRef}>
 
             <div className="flex items-center gap-5">
 

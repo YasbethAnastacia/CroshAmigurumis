@@ -8,12 +8,12 @@ import { Contact } from "./sections/Contactame/contact";
 
 function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="overflow-x-hidden ">
       
       <Fondos />
       
 
-      <main>
+      <main className="min-h-screen overflow-x-hidden flex flex-col gap-10">
         <Inicio />
         <Actividades />
         <Crochet />
