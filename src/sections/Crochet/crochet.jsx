@@ -316,9 +316,14 @@ export const Crochet = () => {
                 </div>
 
             </div>
-
+            {/**text-[clamp(3.5rem,13vw,5.7rem)] */}
             <div className=" flex justify-center items-center " style={gradienteStyle}>
-                <h2 className=" puntadas-negro text-[clamp(3.5rem,13vw,5.7rem)] leading-none" style={{ fontFamily: "var(--title-type)" }}>PROYECTOS ♡</h2>
+                {/*
+                <h2 className=" gradiente-borde2 recorte bg-clip-text text-transparent text-[clamp(3.0rem,12vw,7.0rem)] leading-none" style={{fontFamily: "var(--title-type)", WebkitTextStroke: "1px white",}}>PROYECTOS ♡</h2>
+                <h2 className=" puntadas-negro text-[clamp(3.0rem,12vw,7.0rem)] leading-none" style={{ fontFamily: "var(--title-type)" }}>PROYECTOS ♡</h2>
+                */}
+                <h2 className=" puntadas-negro text-[clamp(3.0rem,12vw,7.0rem)] leading-none" style={{ fontFamily: "var(--title-type)" }}>PROYECTOS ♡</h2>
+                
             </div>
 
 
@@ -363,7 +368,7 @@ export const Crochet = () => {
 
 
                             {/* IZQUIERDA */}
-                            <div className=" absolute left-[5%] top-[50%] -translate-y-1/2 z-10 p-[5px] rounded-3xl" style={gradienteStyle}>
+                            <div className="hidden sm:flex  absolute left-[5%] top-[50%] -translate-y-1/2 z-10 p-[5px] rounded-3xl" style={gradienteStyle}>
 
                                 <div className="bg-black rounded-[20px] shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black]">
 
@@ -381,7 +386,7 @@ export const Crochet = () => {
                             
                             {/* DERECHA */}
                             <div
-                                className="absolute left-[50%] top-[50%] -translate-y-1/2 z-10 p-[5px] rounded-3xl"
+                                className="absolute hidden sm:flex left-[50%] top-[50%] -translate-y-1/2 z-10 p-[5px] rounded-3xl"
                                 style={gradienteStyle}
                             >
                                 <div className="bg-black rounded-[20px] shadow-[0_0_20px_var(--header-shadow-color),0_0_10px_black]">

@@ -62,6 +62,7 @@ body {
 }
 
 
+
 .gradiente-borde{
     background: linear-gradient(
         to right,
@@ -83,6 +84,13 @@ body {
         #c4eaf3,
         #f7c7ca
     );
+
+    
+}
+
+.recorte{
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 
