@@ -290,7 +290,7 @@ export const Crochet = () => {
 
             <div className="py-2 "> {/** gradiente-borde shadow-[0_0_20px_#ffffff] */}
 
-                <div className="relative h-[500px] overflow-hidden flex items-center justify-center  ">
+                <div className="relative h-[500px] overflow-hidden flex items-center justify-center ">
 
                     {/**<video
                     className="absolute inset-0 w-full h-full object-cover object-[10%_20%] opacity-100"
@@ -302,7 +302,7 @@ export const Crochet = () => {
                         <source src="/crochet/video.mp4" type="video/mp4"/>
                     </video>*/}
 
-                    <img className="absolute inset-0 w-full h-full object-cover object-[20%_20%] opacity-100" src="/Actividades/carrusel/amigurumis-portada.png" alt="" />
+                    <img className="absolute inset-0 w-full h-full object-cover object-center" src="/Actividades/carrusel/amigurumis-portada.png" alt="" />
 {/** 
                     <h2
                     style={{ fontFamily: "var(--title-type)" }}
@@ -317,9 +317,12 @@ export const Crochet = () => {
 
             </div>
 
+            <div className=" flex justify-center items-center " style={gradienteStyle}>
+                <h2 className=" puntadas-negro text-[clamp(3.5rem,13vw,5.7rem)] leading-none" style={{ fontFamily: "var(--title-type)" }}>PROYECTOS ♡</h2>
+            </div>
 
 
-            <div className="  grid grid-cols-[60%_40%]  pt-6">
+            <div className=" flex flex-col xl:grid xl:grid-cols-[60%_40%]  pt-6 ">
 
                 {/* CARRUSEL */}
                 <div className=" flex justify-center ">
@@ -329,7 +332,7 @@ export const Crochet = () => {
                         <div className="relative  w-[850px] h-[520px] ">
 
                             <button
-                            className="absolute right-10 top-1/2  rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-120 transition duration-300  z-20 hover:shadow-[0_0_20px_rgba(255,255,255,0.8)]" style={gradienteStyle}
+                            className="absolute right-55 md:right-10 top-1/2  rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-120 transition duration-300  z-30 hover:shadow-[0_0_20px_rgba(255,255,255,0.8)]" style={gradienteStyle}
                             onClick={() => setActual(
                                 actual+1 >= amigurumis.length
                                 ? 0
@@ -343,7 +346,7 @@ export const Crochet = () => {
 
 
                             <button
-                            className="absolute left-3 top-1/2  rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-120 transition duration-300 z-20 hover:shadow-[0_0_20px_rgba(255,255,255,0.8)]" style={gradienteStyle}
+                            className="absolute left-56 md:left-3 top-1/2  rounded-full p-4 -translate-y-1/2 shadow-2xl hover:scale-120 transition duration-300 z-30 hover:shadow-[0_0_20px_rgba(255,255,255,0.8)]" style={gradienteStyle}
                             onClick={() => setActual(
                                 actual-1 == -1 
                                 ? amigurumis.length - 1
@@ -397,7 +400,7 @@ export const Crochet = () => {
                             </div>
 
                             {/* CENTRO */}
-                            <div className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 z-20  rounded-full hover:scale-120  p-3 " style={gradienteStyle}>
+                            <div className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 z-20  rounded-full md:hover:scale-120  p-3 " style={gradienteStyle}>
 
                                 <div className="w-[320px] h-[480px] flex items-center justify-center ">
 

@@ -50,7 +50,7 @@ export const Actividades = () => {
                     <h2 className="text-center relative px-6 py-2  text-5xl font-bold " style={{fontFamily:"var(--title-type)",WebkitTextStroke: "1px black"}}>
                     <LetrasDesign texto={`Mis intereses`}/>
                     </h2>
-                    <div className=" border-l border-r border-white rounded-[2rem] px-3 py-4 text-justify">  {/**border-2  border-dashed border-pink-500  */}
+                    <div className=" border-l border-r border-white rounded-[2rem] px-3 py-4 text-center md:text-justify">  {/**border-2  border-dashed border-pink-500  */}
 
                     
 
