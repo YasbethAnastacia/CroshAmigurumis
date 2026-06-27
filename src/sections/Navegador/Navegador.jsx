@@ -1,5 +1,7 @@
 import {
     Store,
+    Menu,
+    X,
 } from "lucide-react";
 
 
@@ -7,6 +9,7 @@ import {
 import { useEffect, useState } from "react";
 
 export const Navegador = () => {
+    const [menuAbierto, setMenuAbierto] = useState(false);
 
     const [fijo, setFijo] = useState(false);
 
@@ -36,34 +39,46 @@ export const Navegador = () => {
                 }
             `}
         >
-            <div className="grid grid-cols-3 items-center">
+            <div className=" max-w-[1700px] flex justify-between">
+
 
                 {/* Logo */}
-                <div className="justify-self-start">
+                <div className="flex justify-self-start  w-48 ">
                     <p className="font-[var(--header-type-letter)] text-2xl">
                         <Store className="h-10  w-10 " />
                     </p>
                 </div>
 
+                <button className="flex lg:hidden"
+                    onClick={() => setMenuAbierto(!menuAbierto)}
+                >
+                    {
+                        menuAbierto
+                        ? <X className="w-8 h-8"/>
+                        : <Menu className="w-8 h-8"/>
+                    }
+                </button>
+
                 {/* Menú */}
-                <div className="justify-self-center">
-                    <div className={`relative flex items-center gap-15 rounded-full px-15 py-2 ${fijo ? "bg-white" : ""}`}>
+                <div className="justify-self-center  hidden lg:flex ">
+                    <div className={`relative flex items-center text-sm lg:text-base rounded-full gap-5 lg:gap-10 px-5 lg:px-15 py-2 whitespace-nowrap ${fijo ? "bg-white" : ""}`}>
 
                         <div
-                            className={`absolute inset-0 rounded-full pointer-events-none ${
+                            className={`absolute inset-0 rounded-full pointer-events-none  ${
                                 fijo ? "" : "border-b-3"
                             }`}
                         />
 
-                        <a href="">INICIO</a>
-                        <a href="">SOBRE MÍ</a>
-                        <a href="">PROYECTOS</a>
+                        <a className="whitespace-nowrap "href="">INICIO</a>
+                        <a className="whitespace-nowrap "href="">SOBRE MÍ</a>
+                        <a className="whitespace-nowrap "href="">PROYECTOS</a>
+                        
 
                     </div>
                 </div>
 
                 {/* Botón */}
-                <div className="justify-self-end">
+                <div className="justify-self-end w-48  hidden lg:flex ">
                     <a
                         className={`block py-2 px-6 rounded-full ${
                             fijo

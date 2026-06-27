@@ -4,12 +4,12 @@ import {Actividades} from "./sections/Sobremi/actividades";
 import { Fondos } from "./sections/Fondos/fondo"
 import { Crochet } from "./sections/Crochet/crochet";
 import { Contact } from "./sections/Contactame/contact";
-
+import { Navegador } from "./sections/Navegador/Navegador";
 
 function App() {
   return (
     <div className="overflow-x-hidden ">
-      
+      <Navegador/>
       <Fondos />
       
 

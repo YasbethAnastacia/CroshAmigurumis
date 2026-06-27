@@ -14,7 +14,7 @@ export const Inicio = () => {
 
             <div className="min-h-screen grid  lg:grid-cols-5  ">
 
-                <div className="lg:pl-7 flex flex-col pt-25 gap-9 lg:col-span-3">
+                <div className="lg:pl-7 flex flex-col pt-15 md:pt-12 lg:pt-25 gap-9 lg:col-span-3">
 
 {/** text-[clamp(3.75rem,4.5vw,4.5rem)]*/}
                     <div className="grid grid-cols-5 lg:flex lg:flex-col ">
