@@ -4,6 +4,7 @@ import { useState } from "react"
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
 
+
 const amigurumis = [
     {
         img: "/crochet/pollo-llavero.jpeg",
@@ -286,7 +287,8 @@ export const Crochet = () => {
     
 
     return(
-        <section className="w-full overflow-x-hidden flex flex-col pt-10">
+        <section className="relative w-full overflow-hidden flex flex-col pt-10">
+            
 
             <div className="py-2 "> {/** gradiente-borde shadow-[0_0_20px_#ffffff] */}
 

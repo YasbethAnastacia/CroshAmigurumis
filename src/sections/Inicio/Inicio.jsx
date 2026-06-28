@@ -1,23 +1,27 @@
 import { Section } from "lucide-react"
 import { FondoInicio } from "../Fondos/fondo-inicio"
 import {CroshDesign} from "./crosh-desing"
+import {Corazones} from "../corazones";
 
 
 export const Inicio = () => {
 
 
+
     return (
-        <section className="relative   overflow-x-hidden  ">
+        <section className="relative   overflow-hidden  ">
+        <Corazones/>
         <FondoInicio />
+
 
             
 
             <div className="min-h-screen grid  lg:grid-cols-5  ">
 
-                <div className="lg:pl-7 flex flex-col pt-15 md:pt-12 lg:pt-25 gap-9 lg:col-span-3">
+                <div className="lg:pl-7 flex flex-col pt-15 md:pt-12 lg:pt-25 gap-9 lg:col-span-3 ">
 
 {/** text-[clamp(3.75rem,4.5vw,4.5rem)]*/}
-                    <div className="grid grid-cols-5 lg:flex lg:flex-col ">
+                    <div className="relative grid grid-cols-5 lg:flex lg:flex-col  ">
                         
                         <h1 className=" flex flex-col  items-center xl:items-start -rotate-1 col-span-5" style={{ fontFamily: "var(--title-type)" }}>
                             <div className=" titulo-puntadas xl:pl-20 text-[clamp(3.5rem,13vw,5.7rem)] leading-none " >Puntadas ... ♡</div>
@@ -42,8 +46,8 @@ export const Inicio = () => {
                     
 
 
-                    <div className="  whitespace-pre-line z-60 px-12 text-base text-justify">
-                            <div className="relative px-6 pt-6 lg:p-6 rounded-2xl shadow-[0_0_10px_var(--header-shadow-up-color)]">
+                    <div className="  whitespace-pre-line z-60 px-12 text-base text-justify ">
+                            <div className=" relative px-6 pt-6 lg:p-6 rounded-2xl shadow-[0_0_10px_var(--header-shadow-up-color)]">
                                 <p >{`Hola, soy Alejandra Hernández, tengo 25 años, soy mexicana y contadora. Desde siempre me han gustado las manualidades, la creatividad y encontrar formas de expresar mis ideas a través del arte y las cosas hechas a mano.
 
                             Con el tiempo descubrí el mundo del crochet y poco a poco se convirtió en una de mis actividades favoritas, ya que me permite crear piezas únicas con dedicación y cariño.
@@ -62,7 +66,7 @@ export const Inicio = () => {
 
 
                     
-                <div className=" hidden lg:flex justify-center items-center z-60 pr-15 pt-6 col-span-2"> 
+                <div className=" hidden lg:flex justify-center items-center z-60 pr-15 pt-6 col-span-2 "> 
                     <div className="relative w-fit  rounded-4xl shadow-[-6px_0_20px_var(--header-shadow-up-color)]">
                         <div className="absolute inset-0 rounded-4xl shadow-[3px_0_20px_var(--header-shadow-color)]"/>
                         <img className="" src="./Inicio/shakti-dibujo.png" alt="shakti" />

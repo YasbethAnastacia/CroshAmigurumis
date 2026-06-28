@@ -133,3 +133,39 @@ body {
     background: #ff7cc8;
     color: white;
 }
+
+@keyframes flotar {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+/*@keyframes flotar {
+    0% {
+        transform: translate(0px, -3px);
+    }
+
+    25% {
+        transform: translate(10px, 25px);
+    }
+
+    50% {
+        transform: translate(-10px, 50px);
+    }
+
+    75% {
+        transform: translate(10px, 75px);
+    }
+
+    100% {
+        transform: translate(-10px, 100px);
+    }
+}*/
+/*Duracion igual para todos*/
+/*.corazon-animation {
+    animation: flotar 15s infinite linear;
+}*/

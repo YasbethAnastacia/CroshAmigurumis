@@ -11,7 +11,7 @@ export const Actividades = () => {
     return (
         
 
-        <section className="w-full max-w-[1700px] mx-auto px-3 lg:px-6 xl:px-16"> 
+        <section className="w-full max-w-[1700px] mx-auto px-3 lg:px-6 xl:px-16 "> 
         
         <div className="relative flex flex-col lg:px-10 pt-10  border-2 border-[var(--header-text-color)] rounded-[25px] ">
 
