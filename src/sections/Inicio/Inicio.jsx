@@ -18,11 +18,11 @@ export const Inicio = () => {
 
             <div className="min-h-screen grid  lg:grid-cols-5  ">
 
-                <div className="lg:pl-7 flex flex-col pt-15 md:pt-12 lg:pt-25 gap-9 lg:col-span-3 ">
+                <div className="lg:pl-7 flex flex-col pt-19 md:pt-12 lg:pt-25 gap-9 lg:col-span-3 ">
 
 {/** text-[clamp(3.75rem,4.5vw,4.5rem)]*/}
-                    <div className="relative grid grid-cols-5 lg:flex lg:flex-col  ">
-                        
+                    <div className="relative grid grid-cols-5 lg:flex lg:flex-col ">
+
                         <h1 className=" flex flex-col  items-center xl:items-start -rotate-1 col-span-5" style={{ fontFamily: "var(--title-type)" }}>
                             <div className=" titulo-puntadas xl:pl-20 text-[clamp(3.5rem,13vw,5.7rem)] leading-none " >Puntadas ... ♡</div>
 
@@ -40,7 +40,8 @@ export const Inicio = () => {
 
 
                     
-                        <h2 className=" flex justify-center items-center text-4xl" style={{fontFamily:"var(--title-type)",textShadow:"0 4px 10px rgba(0,0,0,1)"}}>
+                        <h2 className=" relative  flex justify-center items-center text-4xl" style={{fontFamily:"var(--title-type)",textShadow:"0 4px 10px rgba(0,0,0,1)"}}>
+                            
                             <CroshDesign/>
                         </h2> 
                     

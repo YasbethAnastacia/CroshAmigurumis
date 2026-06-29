@@ -48,7 +48,7 @@ function App() {
 }, []);*/
   return (
     <div className="overflow-x-hidden ">
-      
+      <Navegador />
       <Fondos />
       
 

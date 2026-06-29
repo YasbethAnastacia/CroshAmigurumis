@@ -75,8 +75,8 @@ export const Actividades = () => {
             </div>
 
             
-            <div className="flex py-6 lg:px-15 xl:px-30 "> 
-
+            <div className="relative flex py-6 lg:px-15 xl:px-30  b"> 
+                        
             <button onClick={() => emblaApi?.scrollPrev()}>
                 <ChevronLeft />
             </button>

@@ -95,7 +95,10 @@ export const Contact = () => {
                                     </div>
 
                                     <input
-                                        className="bg-white px-5 rounded-xl w-full"
+                                        className="bg-white px-5 rounded-xl w-full border-2 border-pink-200
+                                        focus:border-pink-400 focus:outline-none
+                                        transition-all duration-300 bg-white
+                                        "
                                         type={form.type}
                                         name={form.name}
                                         placeholder={form.texto}

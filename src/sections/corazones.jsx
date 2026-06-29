@@ -1,5 +1,5 @@
 export const Corazones = ()=>{
-
+    const cantidad = window.innerWidth >= 1024 ? 30 : 15;
     return(
         <>
         {/*animationName: "flotar",
@@ -11,7 +11,7 @@ export const Corazones = ()=>{
                             
                             fontSize: `${Math.random() * 10 + 20}px`,*/}
                     <div className="absolute inset-0 ">
-                    {[...Array(30)].map((_,i) =>(
+                    {[...Array(cantidad)].map((_,i) =>(
                         <p key={i} className="absolute  opacity-50 pointer-events-none z-index" 
                         style={{
                             fontSize: `${Math.random() * 40 + 10}px`,
