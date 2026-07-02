@@ -34,8 +34,8 @@ export const Navegador = () => {
                 transition-all duration-300
                 ${
                     fijo
-                        ? "fixed top-0 py-4 z-50 gradiente-borde2 backdrop-blur-md text-[var(--font-primary-color)]"
-                        : "absolute top-0 pt-5 z-20 text-[var(--header-text-color)]"
+                        ? "fixed top-0 py-2 z-70 gradiente-borde2 backdrop-blur-md text-pink-400"
+                        : "absolute top-0 pt-4 z-60 text-[var(--header-text-color)]"
                 }
             `}
         >
@@ -43,19 +43,22 @@ export const Navegador = () => {
 
 
                 {/* Logo */}
-                <div className="flex justify-self-start  w-48 ">
-                    <p className="font-[var(--header-type-letter)] text-2xl">
-                        <Store className="h-10  w-10 " />
-                    </p>
+                <div className="flex  justify-self-start  w-48 ">
+                        <p className={`font-[var(--header-type-letter)] text-2xl flex items-center ${fijo ? "w-fit bg-white p-1 rounded-full " : "p-2 w-fit shadow-[0_0_10px_var(--header-shadow-up-color)] bg-[var(--background)] p-1 rounded-full" }`}>
+                            <Store className={` ${fijo ? "h-7  w-7" : "h-8  w-8" }`} />
+                        </p>
                 </div>
 
-                <button className="flex lg:hidden"
+
+            
+
+                <button className={`flex lg:hidden  ${fijo ? " w-fit bg-white p-1 rounded-full" : "p-2 w-fit shadow-[0_0_10px_var(--header-shadow-up-color)] bg-[var(--background)] p-1 rounded-full" } `}
                     onClick={() => setMenuAbierto(!menuAbierto)}
                 >
                     {
                         menuAbierto
-                        ? <X className="w-8 h-8"/>
-                        : <Menu className="w-8 h-8"/>
+                        ? <X className={`w-8 h-8 ${fijo ? " w-fit bg-white p-1 rounded-full" : "p-2 w-fit shadow-[0_0_10px_var(--header-shadow-up-color)] bg-[var(--background)] p-1 rounded-full" }`} />
+                        : <Menu className={`w-8 h-8 ${fijo ? " w-fit bg-white p-1 rounded-full" : "p-2 w-fit shadow-[0_0_10px_var(--header-shadow-up-color)] bg-[var(--background)] p-1 rounded-full" }`} />
                     }
                 </button>
 
@@ -64,26 +67,26 @@ export const Navegador = () => {
                     <div className={`relative flex items-center text-sm lg:text-base rounded-full gap-5 lg:gap-10 px-5 lg:px-15 py-2 whitespace-nowrap ${fijo ? "bg-white" : ""}`}>
 
                         <div
-                            className={`absolute inset-0 rounded-full pointer-events-none  ${
-                                fijo ? "" : "border-b-3"
+                            className={`absolute inset-0 rounded-full pointer-events-none hover:scale-110 ${
+                                fijo ? "" : "shadow-[0_0_10px_var(--header-shadow-up-color)] bg-[var(--background)] "
                             }`}
                         />
 
-                        <a className="whitespace-nowrap "href="">INICIO</a>
-                        <a className="whitespace-nowrap "href="">SOBRE MÍ</a>
-                        <a className="whitespace-nowrap "href="">PROYECTOS</a>
+                        <a className="whitespace-nowrap z-20"href="">INICIO</a>
+                        <a className="whitespace-nowrap z-20"href="">SOBRE MÍ</a>
+                        <a className="whitespace-nowrap z-20"href="">PROYECTOS</a>
                         
 
                     </div>
                 </div>
 
-                {/* Botón */}
-                <div className="justify-self-end w-48  hidden lg:flex ">
+                {/* Botón shadow-[0_0_20px_var(--header-shadow-up-color)]*/}
+                <div className="justify-self-end  w-48 hidden lg:flex ">
                     <a
-                        className={`block py-2 px-6 rounded-full ${
+                        className={`block flex items-center px-6 rounded-full ${
                             fijo
-                                ? "bg-white"
-                                : "shadow-[0_0_20px_var(--header-shadow-up-color)] bg-[var(--background)]"
+                                ? "bg-white " 
+                                : "shadow-[0_0_10px_var(--header-shadow-up-color)] bg-[var(--background)]"
                         }`}
                         href=""
                     >

@@ -169,3 +169,7 @@ body {
 /*.corazon-animation {
     animation: flotar 15s infinite linear;
 }*/
+
+html {
+    scroll-behavior: smooth;
+}

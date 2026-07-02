@@ -9,7 +9,7 @@ export const Inicio = () => {
 
 
     return (
-        <section className="relative   overflow-hidden  ">
+        <section className="relative   overflow-hidden pb-2 ">
         <Corazones/>
         <FondoInicio />
 

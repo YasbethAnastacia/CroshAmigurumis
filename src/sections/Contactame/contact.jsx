@@ -62,9 +62,9 @@ export const Contact = () => {
 
                 <div className="flex flex-col items-center px-10 pb-15 gap-8">
 
-                    <p className="text-justify">
-                        ¿Tienes alguna idea, propuesta o quieres colaborar conmigo?
-                        ¡Me encantaría leerte! Completa el formulario y te responderé
+                    <p className="text-justify lg:text-lg">
+                        ¿Tienes alguna idea, propuesta o quieres colaborar conmigo? 
+                        ¡Me encantaría leerte! <br/>Completa el formulario y te responderé
                         pronto.
                     </p>
 
